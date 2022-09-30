@@ -1,0 +1,254 @@
+:root {
+  --main-text-font: roboto;
+  --main-text-color: #212121;
+  --secondary-text-color: #757575;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+  --accent-color: #2196f3;
+  --button-hover-color: #188ce8;
+  --secondary-accent-color: #2f303a;
+  --white-color: #ffffff;
+  --secondary-background-color: #f5f4fa;
+  --logo-font: raleway;
+}
+
+body {
+  font-family: var(--main-text-font), sans-serif;
+  color: var(--main-text-color);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+/* ----------------!!!INDEX.HTML!!!---------------- */
+
+.logo {
+  font-family: var(--logo-font), sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.logo-second-part {
+  color: var(--main-text-color);
+}
+
+.nav-main {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-main .link {
+  color: var(--main-text-color);
+}
+
+.nav-main .link:focus,
+.nav-main .link:hover {
+  color: var(--accent-color);
+}
+
+.mail,
+.telephone {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+.mail:focus,
+.mail:hover {
+  color: var(--accent-color);
+}
+
+.telephone:focus,
+.telephone:hover {
+  color: var(--accent-color);
+}
+
+/* !!! MAIN SECTION!!!! */
+
+.hero {
+  background-color: var(--secondary-accent-color);
+  text-align: center;
+}
+
+.hero-heading {
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+}
+
+.hero-button {
+  font-family: var(--main-text-font), sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.hero-button:focus,
+.hero-button:hover {
+  cursor: pointer;
+  background-color: var(--button-hover-color);
+}
+
+/* !!!!!!! ADVANTAGE SECTION!!!!!!!! */
+
+.advantage-titles {
+  font-size: 14px;
+  line-height: 1.17;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantage-description {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+/* !!!!!!!!ABOUT SECTION!!!!!!!!!!! */
+
+.about-heading {
+  font-size: 36px;
+  line-height: 1.17;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* !!!!!!!!!TEAM SECTION!!!!!!!!! */
+
+.team {
+  background-color: var(--secondary-background-color);
+}
+
+.team .item {
+  background-color: var(--white-color);
+}
+
+.team-heading {
+  font-size: 36px;
+  line-height: 1.17;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.team-names {
+  font-size: 16px;
+  line-height: 1.19;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-position {
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--secondary-text-color);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* !!!!!FOOTER!!!!!! */
+
+.footer {
+  background-color: var(--secondary-accent-color);
+  color: var(--white-color);
+}
+
+.footer .logo-second-part {
+  color: var(--white-color);
+}
+
+.map-pointer {
+  color: var(--white-color);
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.footer .mail,
+.footer .telephone {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--footer-text-color);
+  font-style: normal;
+}
+
+.footer .mail:focus,
+.footer .mail:hover,
+.footer .telephone:focus,
+.footer .telephone:hover,
+.map-pointer:hover,
+.map-pointer:focus {
+  color: var(--accent-color);
+}
+
+/* ----------------!!!PORTFOLIO.HTML!!!------------------ */
+
+/* FILTER SECTION */
+
+.filter-button {
+  font-family: var(--main-text-font), sans-serif;
+  font-size: 16px;
+  line-height: 1.62;
+  font-weight: 500;
+  background-color: var(--secondary-background-color);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.filter-button:focus,
+.filter-button:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/* PROJECT SECTION */
+
+.project-name {
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+}
+
+.project-type {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.current.link {
+  color: var(--accent-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
