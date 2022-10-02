@@ -26,7 +26,8 @@ ul {
 
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0;
 }
 
@@ -175,6 +176,7 @@ header {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .advantage-description {
@@ -346,6 +348,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+  font-size: 0;
 }
 
 .project-list .item {
@@ -355,6 +358,7 @@ header {
 
 .project-image {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .project-name {
@@ -372,6 +376,7 @@ header {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   margin-left: 24px;
+  margin-bottom: 20px;
 }
 
 .current.link {
