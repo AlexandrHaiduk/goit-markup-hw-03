@@ -18,21 +18,17 @@ body {
   color: var(--main-text-color);
 }
 
-ul {
-  display: inline-block;
-  margin: 0;
-  padding-left: 0;
-}
-
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
+ul,
+ol,
 p {
   margin: 0;
-}
-
-.section {
-  padding: 94px 0;
+  padding: 0;
 }
 
 .link {
@@ -43,24 +39,35 @@ p {
   list-style: none;
 }
 
-.item {
-  display: inline-block;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-header {
-  display: block;
+/* ----------------!!!INDEX.HTML!!!---------------- */
+
+.page-header {
   padding: 24px 0;
   border-bottom: 1px solid var(--header-border-color);
 }
 
-/* ----------------!!!INDEX.HTML!!!---------------- */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   font-family: var(--logo-font), sans-serif;
@@ -69,7 +76,6 @@ header {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  vertical-align: middle;
 }
 
 .logo-second-part {
@@ -82,14 +88,14 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   margin-left: 93px;
-  display: inline-block;
+  display: flex;
 }
 
 .nav-main .link {
   color: var(--main-text-color);
 }
 
-.nav-main .item:nth-child(n + 2) {
+.nav-main .item:not(:first-child) {
   margin-left: 50px;
 }
 
@@ -98,16 +104,21 @@ header {
   color: var(--accent-color);
 }
 
+.contacts {
+  margin-left: auto;
+  display: flex;
+}
+
+.contacts .item:not(:first-child) {
+  margin-left: 50px;
+}
+
 .mail,
 .telephone {
   font-size: 14px;
   line-height: 1.14;
   font-weight: 500;
   color: var(--secondary-text-color);
-}
-
-.telephone {
-  margin-left: 50px;
 }
 
 .mail:focus,
@@ -122,6 +133,8 @@ header {
 .hero {
   background-color: var(--secondary-accent-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-heading {
@@ -133,7 +146,6 @@ header {
   color: var(--white-color);
   width: 696px;
   margin: 0 auto;
-  margin-top: 106px;
 }
 
 .hero-button {
@@ -145,7 +157,6 @@ header {
   color: var(--white-color);
   background-color: var(--accent-color);
   margin-top: 30px;
-  margin-bottom: 106px;
   width: 216px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0px;
@@ -161,13 +172,18 @@ header {
 
 /* !!!!!!! ADVANTAGE SECTION!!!!!!!! */
 
-.advantage .list {
-  display: flex;
-  justify-content: space-between;
+.advantage {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.advantage .item:nth-child(n + 2) {
-  margin-left: 30px;
+.advantage .list {
+  display: flex;
+  gap: 30px;
+}
+
+.advantage .item {
+  flex-basis: calc((100%-30px)/4);
 }
 
 .advantage-titles {
@@ -188,31 +204,34 @@ header {
 
 /* !!!!!!!!ABOUT SECTION!!!!!!!!!!! */
 
+.about {
+  text-align: center;
+  padding-bottom: 94px;
+}
 .about-heading {
   font-size: 36px;
   line-height: 1.17;
   font-weight: 700;
   letter-spacing: 0.03em;
-  margin: 0 auto;
   margin-bottom: 50px;
 }
 
-.about .container {
-  flex-wrap: wrap;
-}
-
-.about .item:nth-child(n + 2) {
-  margin-left: 30px;
+.about .list {
+  display: flex;
+  gap: 30px;
 }
 
 /* !!!!!!!!!TEAM SECTION!!!!!!!!! */
 
-.team .container {
-  flex-wrap: wrap;
-}
-
 .team {
   background-color: var(--secondary-background-color);
+  text-align: center;
+  padding: 94px 0;
+}
+
+.team .list {
+  display: flex;
+  gap: 30px;
 }
 
 .team .item {
@@ -222,22 +241,14 @@ header {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team .item:nth-child(n + 2) {
-  margin-left: 30px;
-}
-
 .team-heading {
   font-size: 36px;
   line-height: 1.17;
   font-weight: 700;
   letter-spacing: 0.03em;
-  margin: 0 auto;
   margin-bottom: 50px;
 }
 
-.team-photo {
-  margin-bottom: 30px;
-}
 
 .team-names {
   font-size: 16px;
@@ -245,7 +256,6 @@ header {
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
 }
 
 .team-position {
@@ -254,7 +264,11 @@ header {
   color: var(--secondary-text-color);
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+}
+
+.team-definition {
+  padding: 30px 0;
+  font-size: 0;
 }
 
 /* !!!!!FOOTER!!!!!! */
@@ -265,16 +279,20 @@ header {
   padding: 60px 0;
 }
 
-.footer .container {
-  display: block;
-}
-
 .footer .item {
   display: block;
 }
 
+.footer .item + .item {
+  margin-top: 9px;
+}
+
 .footer .logo-second-part {
   color: var(--white-color);
+}
+
+.footer-adress {
+  margin-top: 20px;
 }
 
 .map-pointer {
@@ -282,13 +300,6 @@ header {
   font-size: 14px;
   line-height: 1.7;
   font-style: normal;
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 9px;
-}
-
-.footer .mail {
-  margin-bottom: 9px;
 }
 
 .footer .mail,
@@ -298,8 +309,6 @@ header {
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
   font-style: normal;
-  display: block;
-  margin-left: 0;
 }
 
 .footer .mail:focus,
@@ -313,13 +322,17 @@ header {
 
 /* ----------------!!!PORTFOLIO.HTML!!!------------------ */
 
-/* FILTER SECTION */
+/* PROJECT SECTION */
+
+.project {
+  padding: 94px 0;
+}
 
 .filter {
-  margin: 0 auto;
-  display: block;
-  width: 586px;
   margin-bottom: 50px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 .filter-button {
   font-family: var(--main-text-font), sans-serif;
@@ -336,10 +349,6 @@ header {
   border-radius: 4px;
 }
 
-.filter .item:nth-child(n + 2) {
-  padding-left: 8px;
-}
-
 .filter-button:focus,
 .filter-button:hover {
   background-color: var(--accent-color);
@@ -347,24 +356,20 @@ header {
   cursor: pointer;
 }
 
-/* PROJECT SECTION */
-
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 30px;
-  font-size: 0;
 }
 
 .project-list .item {
-  border: 1px solid var(--project-item-border);
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.project-image {
-  width: 100%;
-  margin-bottom: 20px;
+.project-definition {
+  padding: 20px 24px;
+  border: 1px solid var(--project-item-border);
+  border-top: none;
 }
 
 .project-name {
@@ -373,7 +378,6 @@ header {
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--main-text-color);
-  margin-left: 24px;
 }
 
 .project-type {
@@ -381,8 +385,6 @@ header {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  margin-left: 24px;
-  margin-bottom: 20px;
 }
 
 .current.link {
